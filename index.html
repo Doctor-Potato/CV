@@ -60,12 +60,17 @@
 </head>
 
 <body>
-  <script type="text/javascript" id="">
+  <script type="text/javascript">
+  window.intercomSettings = {
+app_id: "gwbpci68",
+custom_launcher_selector:'#custom_handoff'
+};
+  </script>
+  <script type="text/javascript" id="custom_handoff">
     window.adaSettings = {
       eventCallbacks: {
         custom_handoff: function(a) {
           console.log(window.url);
-          document.querySelector('https://widget.intercom.io/widget/gwbpci68').click();
           adaEmbed.toggle()
         }
       },
